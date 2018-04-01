@@ -1,0 +1,4 @@
+{
+    "cols":"username,password,phone,position",
+    "api":"adduser"
+}   

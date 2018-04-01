@@ -1,0 +1,28 @@
+{
+    "api":"getAll",
+    "delapi":"delgoods",
+    "redactApi":"updatagoods",
+    "cols":"*",
+    "filterCols":"id,bigtypeid,smalltypeid,detailsimg,hot,saleprice",
+    "dictionary":{
+        "en":{},
+        "cn":{
+            "date":"入库时间"
+        }
+    },
+    "multiple":"true",
+    "pagination":{
+        "pageitems":5
+    },
+    "filterData":{
+        "date":{
+            "type":"DateFormat",
+            "format":"yyyy年MM月dd日 hh:mm:ss"
+        }
+    },
+    "search":{
+        "show":true,
+        "api":"config/goodssearch.txt"
+    },
+    "goodsRedact":"config/goodsredact.txt"
+}

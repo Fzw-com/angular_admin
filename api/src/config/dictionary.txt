@@ -1,0 +1,39 @@
+{
+    "en":{
+        "title":"Tittle",
+        "describes":"Describes",
+        "saleqty":"Saleqty",
+        "price":"Price",
+        "saleprice":"Sale Price",
+        "qty":"Qty",
+        "date":"Date",
+        "username":"UserName",
+        "password":"Password",
+        "email":"E-mail",
+        "nickname":"NickName",
+        "phone":"Phone",
+        "bigtypeid":"BigType",
+        "smalltypeid":"SmallType",
+        "type":"Type",
+        "position":"Position"
+    },
+    "cn":{
+        "title":"名称",
+        "describes":"描述",
+        "saleqty":"销量",
+        "price":"价钱",
+        "saleprice":"售价",
+        "qty":"数量",
+        "date":"创建日期",
+        "username":"用户名",
+        "password":"密码",
+        "email":"邮箱",
+        "nickname":"昵称",
+        "phone":"手机号",
+        "bigtypeid":"总类",
+        "smalltypeid":"分类",
+         "type":"类别",
+         "position":"职位"
+    }
+    
+}

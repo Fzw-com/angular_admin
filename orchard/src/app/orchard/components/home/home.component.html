@@ -1,0 +1,55 @@
+<nz-layout>
+    <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
+        <div class="logo">
+            <div class = "logo-img">
+                <img src="https://imgqn4.fruitday.com/images/product_pic/2109/1/1-270x270-2109-AB17T5A1.jpg"/>
+                
+            </div>
+        </div>
+        <ul nz-menu [nzTheme]="'dark'" [nzMode]="isCollapsed?'vertical':'inline'">
+            <li nz-submenu>
+                <span title><i class="anticon anticon-user"></i><span class="nav-text">商品管理</span></span>
+                <ul class = "dd">
+                    <li nz-menu-item><a routerLink="/allgoods">所有商品</a></li>
+                    <li nz-menu-item><a routerLink="/addgoods">添加商品</a></li>
+                </ul>
+            </li>
+            <li nz-submenu>
+                <span title><i class="anticon anticon-team"></i><span class="nav-text">权限管理</span></span>
+                <ul class = "dd">
+                    <li nz-menu-item><a routerLink="/alluser">用户列表</a></li>
+                    <li nz-menu-item><a routerLink="/adduser">用户添加</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nz-sider>
+    <nz-layout>
+        <nz-header style="background: #fff; padding:0;">
+            <i class="anticon trigger" [class.anticon-menu-fold]="!isCollapsed" [class.anticon-menu-unfold]="isCollapsed" (click)="isCollapsed=!isCollapsed"></i>
+            <span class = 'ht_admin'>后台管理系统</span>
+            <div class="btn-group my" dropdown >
+                <img src="../../../../assets/img/user-header.png">
+                
+                    <button type="button" class="btn btn-danger">{{username}}</button>
+                    <button type="button" dropdownToggle class="btn btn-danger dropdown-toggle dropdown-toggle-split">
+                        <span class="caret"></span>
+                        <span class="sr-only">Split button!</span>
+                    </button>
+                    <ul *dropdownMenu class="dropdown-menu" role="menu">
+                        <li role="menuitem" class="dropdown-item" (click)="exit()"><a>退出</a></li>
+                    </ul>
+                    
+            </div>
+                   
+            <select [(ngModel)]="common.lanType"  class="form-control select">
+                <option value="en">English</option>
+                <option value="cn">中文</option>
+            </select>   
+        </nz-header>
+        <nz-content style="margin:16px;">
+            <div style="padding:24px; background: #fff; min-height: 650px;">
+                <router-outlet></router-outlet> 
+            </div>
+        </nz-content>
+    </nz-layout>
+</nz-layout>
